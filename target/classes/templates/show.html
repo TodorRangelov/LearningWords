@@ -1,0 +1,41 @@
+<html xmlns:th="https://thymeleaf.org">
+<link rel="stylesheet" type="text/css" href="main.css">
+
+<head>
+    <link rel="stylesheet" href="main.css">
+</head>
+<head>
+    <title>Show Word</title>
+</head>
+<body>
+
+<div class="navbar">
+    <h1>Learn English</h1>
+    <ul>
+        <li class="navbarButtons"><a href="http://localhost:8000/search">&#x1F50E;&#xFE0E;</a></li>
+        <li class="navbarButtons"><a href="http://localhost:8000/add">Add Words</a></li>
+        <li class="navbarButtons"><a href="http://localhost:8000/getE">Show Word To English</a></li>
+        <li class="navbarButtons"><a href="http://localhost:8000/getB">Show Word To Bulgarian</a></li>
+        <li class="navbarButtons"><a href="http://localhost:8000/numberOfWords">Show Number Of Words</a></li>
+    </ul>
+</div>
+
+<div class="body">
+    <table>
+        <tr>
+            <td><p class="text">Word: </p></td>
+            <td><p class="the_word" th:text="${word.toEnglish}"></p></td>
+            <td><p class="text"> - </p></td>
+            <td><p class="the_word" th:text="${word.toBulgarian}"></p></td>
+        </tr>
+
+        <p class="show">
+            <a href="http://localhost:8000/getE">Continue</a>
+        <p></p>
+        </p>
+    </table>
+</div>
+
+</table>
+</body>
+</html>  

@@ -1,0 +1,49 @@
+<html xmlns:th="https://thymeleaf.org">
+<link rel="stylesheet" type="text/css" href="main.css">
+
+<head>
+    <title>Word To English</title>
+</head>
+<body>
+
+<div class="navbar">
+    <h1>Learn English</h1>
+    <ul>
+        <li class="navbarButtons"><a href="http://localhost:8000/search">&#x1F50E;&#xFE0E;</a></li>
+        <li class="navbarButtons"><a href="http://localhost:8000/add">Add Words</a></li>
+        <li class="navbarButtons"><a href="http://localhost:8000/getE">Show Word To English</a></li>
+        <li class="navbarButtons"><a href="http://localhost:8000/getB">Show Word To Bulgarian</a></li>
+        <li class="navbarButtons"><a href="http://localhost:8000/numberOfWords">Show Number Of Words</a></li>
+    </ul>
+</div>
+
+<div class="body">
+    <table>
+        <tr>
+            <td><p class="text">Bulgarian: </p></td>
+            <td><p class="the_word" th:text="${responseDto.newWord}"></p></td>
+        </tr>
+
+        <p class="show">
+            <a href="http://localhost:8000/showB">Show</a>
+        <p></p>
+        </p>
+
+
+
+        <form action="answerE" method="post">
+            <table>
+                <tr>
+                    <td class="text"><label for="word.toEnglish">English: </label></td>
+                    <td><input type="text" name="toEnglish"></input></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="submit" value="Submit"></input></td>
+                </tr>
+            </table>
+        </form>
+    </table>
+</div>
+</body>
+</html>  

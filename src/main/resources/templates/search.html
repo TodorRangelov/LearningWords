@@ -1,0 +1,42 @@
+<html lang="en">
+<link rel="stylesheet" type="text/css" href="main.css">
+
+<head>
+    <title>Search</title>
+</head>
+<body>
+<div class="navbar">
+    <h1>Learn English</h1>
+    <ul>
+        <li class="navbarButtons"><a href="http://localhost:8000/search">&#x1F50E;&#xFE0E;</a></li>
+        <li class="navbarButtons"><a href="http://localhost:8000/add">Add Words</a></li>
+        <li class="navbarButtons"><a href="http://localhost:8000/getE">Show Word To English</a></li>
+        <li class="navbarButtons"><a href="http://localhost:8000/getB">Show Word To Bulgarian</a></li>
+        <li class="navbarButtons"><a href="http://localhost:8000/numberOfWords">Show Number Of Words</a></li>
+    </ul>
+</div>
+
+<div class="body">
+
+    <form action="searchResponse" method="post">
+        <table>
+            <tr>
+                <td class="text"><label for="word.toBulgarian">Bulgarian: </label></td>
+                <td><input type="text" name="toBulgarian"></input></td>
+            </tr>
+            <tr>
+                <td class="text"><label for="word.toEnglish">English: </label></td>
+                <td><input type="text" name="toEnglish"></input></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="Submit"></input></td>
+            </tr>
+        </table>
+    </form>
+
+
+
+</div>
+</body>
+</html>

@@ -1,0 +1,74 @@
+html {
+    background-color: #15202B;
+    font-family: 'Roboto', sans-serif;
+}
+
+    h1 {
+      color: #04AA6D;
+    }
+
+.navbar {
+ background-color: #273B4F;
+margin: auto;
+  width: 60%;
+  padding: 10px;
+  padding-bottom: 50px;
+}
+
+a:link {text-decoration: none;}
+a {color: white;}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li:hover {background-color: #038555;}
+li {
+  display: inline;
+        padding: 8px;
+        font-family: roboto, sans-serif;
+        font-size: 18px;
+        border-radius: 10px;
+        margin: 2px;
+}
+
+.navbarButtons {
+      background-color: #04AA6D;
+      color: #FFFFFF;
+}
+
+.show:hover {background-color: #D45A2E;}
+.show {
+  display: inline;
+        padding: 8px;
+        background-color: #FF6C37;
+        font-family: roboto, sans-serif;
+        font-size: 20px;
+        border-radius: 10px;
+        margin: 5px;
+}
+
+.body {
+margin: auto;
+  width: 60%;
+  padding: 10px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.text {
+    color: #04AA6D;
+    font-size: 18px;
+}
+
+.the_word {
+    color: #ADD8E6;
+    font-size: 20px;
+}
+
+.message {
+    color: #ADD8E6;
+    font-size: 20px;
+}
