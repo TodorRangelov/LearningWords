@@ -6,7 +6,6 @@ import com.LearningEnglish.dto.ResponseDto;
 import com.LearningEnglish.model.Word;
 import com.LearningEnglish.repository.Repository;
 import com.LearningEnglish.repository.WordRepository;
-import com.LearningEnglish.util.HTMLCreator;
 import org.springframework.stereotype.Service;
 import org.thymeleaf.TemplateEngine;
 
@@ -22,13 +21,13 @@ public class WordService {
     private Random rnd;
     private Word currentWord;
     private final Repository repository;
-    private final HTMLCreator htmlCreator;
+    private final HTMLService htmlCreator;
     private Boolean useInternalRepository;
     private boolean toEnglish;
     private List<Word> allWord;
 
     public WordService(WordRepository wordRepository, TemplateEngine templateEngine,
-                       Repository repository, HTMLCreator htmlCreator) {
+                       Repository repository, HTMLService htmlCreator) {
         this.wordRepository = wordRepository;
         this.templateEngine = templateEngine;
         this.repository = repository;
@@ -199,6 +198,7 @@ public class WordService {
     public void setToEnglish(boolean toEnglish) {
         this.toEnglish = toEnglish;
     }
+
 }
 
 

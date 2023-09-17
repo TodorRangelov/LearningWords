@@ -1,6 +1,6 @@
 package com.LearningEnglish.controller;
 
-import com.LearningEnglish.service.HTMLTemplateService;
+import com.LearningEnglish.util.HTMLTemplateService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.thymeleaf.TemplateEngine;

@@ -5,7 +5,7 @@ import com.LearningEnglish.dto.ResponseDto;
 import com.LearningEnglish.model.Word;
 import com.LearningEnglish.repository.Repository;
 import com.LearningEnglish.service.WordService;
-import com.LearningEnglish.util.HTMLCreator;
+import com.LearningEnglish.service.HTMLService;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -16,9 +16,9 @@ public class DemoController {
 
     private final WordService wordService;
     private final Repository repository;
-    private final HTMLCreator htmlCreator;
+    private final HTMLService htmlCreator;
 
-    public DemoController(WordService wordService, Repository repository, HTMLCreator htmlCreator) {
+    public DemoController(WordService wordService, Repository repository, HTMLService htmlCreator) {
         this.wordService = wordService;
         this.repository = repository;
         this.htmlCreator = htmlCreator;
