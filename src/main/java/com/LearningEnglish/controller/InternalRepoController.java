@@ -5,7 +5,7 @@ import com.LearningEnglish.dto.ResponseDto;
 import com.LearningEnglish.model.Word;
 import com.LearningEnglish.repository.Repository;
 import com.LearningEnglish.service.WordService;
-import com.LearningEnglish.util.HTMLCreator;
+import com.LearningEnglish.service.HTMLService;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -14,10 +14,10 @@ import org.springframework.web.bind.annotation.*;
 public class InternalRepoController {
 
     private final Repository repository;
-    private final HTMLCreator htmlCreator;
+    private final HTMLService htmlCreator;
     private final WordService wordService;
 
-    public InternalRepoController(Repository repository, HTMLCreator htmlCreator, WordService wordService) {
+    public InternalRepoController(Repository repository, HTMLService htmlCreator, WordService wordService) {
         this.repository = repository;
         this.htmlCreator = htmlCreator;
         this.wordService = wordService;

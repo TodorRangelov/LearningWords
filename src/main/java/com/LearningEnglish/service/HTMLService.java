@@ -1,24 +1,28 @@
-package com.LearningEnglish.util;
+package com.LearningEnglish.service;
 
 import com.LearningEnglish.dto.ResponseDto;
 import com.LearningEnglish.model.Word;
-import com.LearningEnglish.service.HTMLTemplateService;
+import com.LearningEnglish.repository.WordRepository;
+import com.LearningEnglish.util.HTMLTemplateService;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Component
-public class HTMLCreator {
+public class HTMLService {
 
     private final HTMLTemplateService htmlTemplateService;
+    private final WordRepository wordRepository;
 
-    public HTMLCreator(HTMLTemplateService htmlTemplateService) {
+    public HTMLService(HTMLTemplateService htmlTemplateService, WordRepository wordRepository) {
         this.htmlTemplateService = htmlTemplateService;
+        this.wordRepository = wordRepository;
     }
 
     public String createHomePage() {
-        return htmlTemplateService.getBASED_TEMPLATE();
+        String basedTemplate = htmlTemplateService.getBASED_TEMPLATE(wordRepository.getNumberOfWords());
+        return basedTemplate;
     }
 
     private String buttonTemplateSeveral(String text, String prefix) {

@@ -20,5 +20,7 @@ public interface WordRepository extends JpaRepository<Word, Integer> {
                     "LIMIT :limit OFFSET :offset", nativeQuery = true)
     List<Word> findWordsOffsetAndLimit(@Param("offset") int offset, @Param("limit") int limit);
 
+    @Query(value = "SELECT COUNT(id) FROM words;", nativeQuery = true)
+    Integer getNumberOfWords();
 
 }
